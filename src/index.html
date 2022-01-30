@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>idaproject test</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header class="header">
+          <h2 class="header__title">Добавление товара</h2>
+          <div class="sort">
+            <select class="sort__select" name="sort" id="sortProducts">
+              <option class="sort__option" value="default">По умолчанию</option>
+              <option class="sort__option" value="minToMax">
+                Сначала дешевые
+              </option>
+              <option class="sort__option" value="maxToMin">
+                Сначала дорогие
+              </option>
+            </select>
+          </div>
+        </header>
+        <main class="main">
+          <div class="addProduct">
+            <form class="addProduct__form" name="addProduct" novalidate>
+              <fieldset class="addProduct__fieldset">
+                <div class="field">
+                  <label class="field__label field__label_required" for="title"
+                    >Наименование товара</label
+                  >
+                  <input
+                    class="field__input field__input_error"
+                    type="text"
+                    name="title"
+                    id="title"
+                    placeholder="Введите наименование товара"
+                    required
+                  />
+                  <label
+                    class="field__error-message"
+                    for="title"
+                    aria-live="polite"
+                  />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="description"
+                    >Описание товара</label
+                  >
+                  <textarea
+                    class="field__input field__textarea"
+                    name="description"
+                    id="description"
+                    placeholder="Введите описание товара"
+                  ></textarea>
+                </div>
+                <div class="field">
+                  <label
+                    class="field__label field__label_required"
+                    for="imageUrl"
+                    >Ссылка на изображение товара</label
+                  >
+                  <input
+                    class="field__input"
+                    type="url"
+                    name="imageUrl"
+                    id="imageUrl"
+                    placeholder="Введите ссылку"
+                    required
+                  />
+                  <label
+                    class="field__error-message"
+                    for="imageUrl"
+                    aria-live="polite"
+                  />
+                </div>
+                <div class="field">
+                  <label class="field__label field__label_required" for="price"
+                    >Цена товара</label
+                  >
+                  <input
+                    class="field__input"
+                    type="text"
+                    name="price"
+                    id="price"
+                    placeholder="Введите цену"
+                    required
+                  />
+                  <label
+                    class="field__error-message"
+                    for="price"
+                    aria-live="polite"
+                  />
+                </div>
+              </fieldset>
+              <button class="addProduct__submitButton" type="submit" disabled>
+                Добавить товар
+              </button>
+            </form>
+          </div>
+          <ul class="products"></ul>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
